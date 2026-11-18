@@ -78,6 +78,6 @@
             "qtVersion": 6
         }
     },
-    "name": "freeze-filter",
+    "name": "gauss-frame-hold",
     "version": "0.3.5"
 }

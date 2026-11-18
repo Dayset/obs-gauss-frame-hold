@@ -1,15 +1,8 @@
-# Freeze Filter for OBS Studio
+# Gaussian Frame Hold for OBS Studio
 
-Plugin for OBS Studio to freeze a source using a filter
+OBS filter that holds frames per region. Whole-screen mode picks one rate from 120, 60, 40, 30, 24, 20 or 15 fps. Gaussian mode keeps the centre (about 5% of the frame area) at 120 fps and drops the outer edges to 15 fps.
 
-# Download
-https://obsproject.com/forum/resources/freeze-filter.950/
+Built on the layout of exeldro/obs-freeze-filter (GPL-2.0). Untested until the first CI build and an OBS run on the owner's PC.
 
-# Build
-- Build OBS Studio: https://obsproject.com/wiki/Install-Instructions
-- Check out this repository to plugins/freeze-filter
-- Add `add_subdirectory(freeze-filter)` to plugins/CMakeLists.txt
-- Rebuild OBS Studio
-
-# Donations
-https://www.paypal.me/exeldro
+## Build (GitHub Actions)
+Push to master; the workflow in `.github/workflows/build.yml` builds Windows and macOS packages.
